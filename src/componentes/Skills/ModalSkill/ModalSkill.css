@@ -1,0 +1,71 @@
+.dark-maskBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all .5s ease;
+}
+
+.modal-container {
+    min-width: 300px;
+    margin-inline: 2rem;
+    max-width: 600px;
+    border-radius: 1rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 3rem;
+    background-color: #fff;
+    color: #313131;
+}
+
+.modal-container > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.modal-container svg {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .2s all ease;
+}
+
+.modal-container svg:hover {
+    color: #878787;
+}
+
+.modal-container div div {
+    flex: 1;
+}
+
+.modal-container i {
+    font-size: 65px;
+}
+
+.modal-container h3 {
+    font-family: var(--fonte-titulo-principal);
+    font-size: var(--size-texto-grande);
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.modal-container p {
+    font-family: var(--fonte-primaria);
+    font-size: var(--size-texto-small);
+    text-align: center;
+}
+
+.modal-container .progress-container {
+    align-self: center;
+}
+

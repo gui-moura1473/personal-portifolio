@@ -1,0 +1,17 @@
+.botaoCartoon {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    background-color: var(--cor-fundo-botoes);
+    padding: 1.4rem 2.5rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 0 #000;
+    border: 1px solid #000;
+    transition: all .3s ease-in-out;
+}
+
+.botaoCartoon:hover {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}

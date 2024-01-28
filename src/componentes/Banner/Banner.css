@@ -1,0 +1,344 @@
+.banner {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner + div {
+    position: relative;
+    
+}
+
+.containerBanner {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.bannerWrapper {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+
+.colunaEsquerda {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.colunaDireita {
+    position: relative;
+    flex: 1;
+}
+
+.tituloPrincipal {
+    font-family: var(--fonte-titulo-principal);
+    font-size: var(--size-titulo-principal);
+    font-weight: 400;
+    color: var(--cor-texto-principal);
+}
+
+.paragrafoPrincipal {
+    font-family: var(--fonte-primaria);
+    font-size: var(--size-texto-principal);
+    line-height: 3.2rem;
+    color: var(--cor-texto-principal);
+    width: 90%;
+}
+
+.minhaFoto {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 90%;
+    max-width: 520px;
+}
+
+.janelaCodigo__container {
+    max-width: 340px;
+    width: 50%;
+    min-width: 180px;
+    aspect-ratio: 5/3;
+    border-radius: 2rem;
+    border: 2px solid #313131;
+    background-color: var(--branco-amarelado);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.6rem;
+    font-family: var(--fonte-monoespacada);
+}
+
+.janelaCodigo__header {
+    height: 15%;
+    border-bottom: 2px solid #313131;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    padding-left: 5%;
+}
+
+.janelaCodigo__dots {
+    height: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #313131;
+}
+
+.janelaCodigo__body {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__redesSociais {
+    position: absolute;
+    bottom: 10vh;
+    display: flex;
+    align-self: flex-start;
+    padding-top: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 2;
+}
+
+.codeText__blue {
+    color: blue;
+}
+
+.codeText__red {
+    color: red;
+}
+
+.banner__redesSociais svg {
+    color: var(--cor-texto-principal);
+    transition: .4s all ease-in;
+}
+
+.banner__redesSociais svg:hover {
+    color: #747474;
+}
+
+.animated.fadeIn-left {
+    opacity: 1;
+    animation: fromLeft 2s ease 0s 1;
+}
+
+.animated.fadeIn-right {
+    opacity: 1;
+    animation: fromRight 2s ease 0s 1;
+}
+
+.animated.fadeIn-bottom {
+    opacity: 1;
+    animation: fromBottom 2s ease 0s 1;
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}   
+
+@keyframes fromBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}   
+
+@keyframes fromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}   
+
+.animated {
+    opacity: 0;
+}
+
+
+@media (max-width:1400px) { 
+    
+    .minhaFoto {
+        max-width: 480px;
+    }
+
+    .banner__redesSociais svg {
+        height: 45px;
+        width: 45px;
+    }
+
+    .janelaCodigo__container {
+        font-size: 1.5rem;
+    }
+
+    .btn__download svg {
+        height: 35px;
+        width: 35px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .janelaCodigo__container {
+        font-size: 1rem;
+    }
+    
+    .paragrafoPrincipal {
+        line-height: 2.5rem;
+    }
+
+    .banner__redesSociais svg {
+        height: 40px;
+        width: 40px;
+    }
+
+    .btn__download {
+        margin-left: 0;
+        font-size: 1.6rem;
+    }
+
+    .btn__download svg {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bannerWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0;
+    }
+
+    .containerBanner {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .colunaEsquerda {
+        padding-top: 10vh;
+        padding-bottom: 2rem;
+        flex: 0;
+    }
+
+    .colunaDireita {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .tituloPrincipal {
+        text-align: center;
+    }
+    
+    .paragrafoPrincipal {
+        text-align: center;
+        width: 100%;
+        line-height: 2.5rem;
+    }
+
+    .minhaFoto {
+        display: none;
+    }
+
+    .janelaCodigo__container {
+        position: relative; 
+        bottom: 30%;
+        font-size: 1.6rem   ;
+    }
+
+    .banner__redesSociais {
+        align-self: center;
+        position: relative;
+        bottom: auto;
+        flex-direction: row;
+    }
+    
+}
+
+@media (max-width:480px) {
+    .minhaFoto {
+        display: none;
+    }
+    
+    .colunaDireita {
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .paragrafoPrincipal {
+        margin-top: 1rem;
+        width: 80%;
+        align-self: center;
+        line-height: 2rem;
+    }
+
+    .janelaCodigo__container {
+        position: relative;
+    }
+
+    .banner__redesSociais {
+        flex-wrap: wrap;
+    }
+
+    .banner__redesSociais svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .btn__download {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+    
+    .btn__download svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    .janelaCodigo__container {
+        position: relative; 
+        bottom: 30%;
+        border-radius: 1.2rem;
+        font-size: 1.1rem;
+    }
+}

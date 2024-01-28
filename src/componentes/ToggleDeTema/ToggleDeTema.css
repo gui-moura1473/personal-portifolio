@@ -1,0 +1,46 @@
+.containerSwitch {
+    margin-left: 3rem;
+}
+
+.switch {
+    position: relative;
+    background: linear-gradient(297deg, rgba(204, 204, 204, 1) 0%, rgba(207, 207, 207, 1) 38%, rgba(255, 255, 255, 1) 100%);
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #8f8f8f;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.slider {
+    position: absolute;
+    background-image: url('../../assets/png-clipart-sun-sun.png');
+    background-size: contain;
+    background-position: center center;
+    border: 2px solid orange;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    transition: all .5s ease-in-out;
+}
+
+#chk:checked~.switch {
+    background: rgb(120, 120, 120);
+    background: linear-gradient(62deg, rgba(120, 120, 120, 1) 0%, rgba(164, 164, 164, 1) 38%, rgba(255, 255, 255, 1) 100%);
+}
+
+#chk:checked~.switch .slider {
+    transform: translateX(20px) rotate(360deg);
+    background-image: url('../../assets/png-transparent-drawing-computer-icons-moon-white-cartoon-moon.png');
+    background-size: contain;
+    background-position: center center;
+    border: 2px solid rgb(144, 144, 144);
+}
+
+#chk {
+    display: none;
+}
